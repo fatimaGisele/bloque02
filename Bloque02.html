@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloque02</title>
+</head>
+<body>
+   <!-- <script>
+        /*[Piloto] 
+Crear un script que defina e inicialice una variable de tipo cadena de caracteres donde almacenemos el nombre 
+de un miembro del grupo y otra variable de tipo entera donde se almacena su edad. 
+Imprimir cada variable en una línea distinta en pantalla.  */
+ 
+let nombre = prompt("ingrese su nombre: ");
+let edad = parseInt(prompt("ingrese su edad: "));
+document.write(nombre + "<br>");
+document.write(edad);
+    </script> -->
+
+    <!-- <script> 
+        /*[Basic] 
+Crear un script que permita ingresar a una persona su nombre, su correo y su edad. 
+Mostrar un mensaje en pantalla y en la consola diciendo: Hola [nombre], te enviaremos un mail a [correo] */
+let nombre = prompt("ingrese su nombre: ");
+let correo = prompt("ingrese su correo: ");
+let edad = parseInt(prompt("ingrese su edad: "));
+document.write(`Hola ${nombre}, te enviaremos un mail a ${correo}`);
+    </script> -->
+
+    <!-- <script>
+        /*[Ensalada] 
+    Escribir un script en el cual se ingresen 6 números enteros. Con estos se debe 
+    calcular la  suma de los 3 primeros y el producto entre el tercero, el cuarto y el 5to y 
+    sumarle el sexto 
+        */
+    let primerNumero = parseInt(prompt("ingrese el primer numero: "));
+    let segundoNumero = parseInt(prompt("ingrese el segundo numero: "));
+    let tercerNumero = parseInt(prompt("ingrese el tercer numero: "));
+    let cuartoNumero = parseInt(prompt("ingrese el cuarto numero: "));
+    let quintoNumero = parseInt(prompt("ingrese el quinto numero: "));
+    let sextoNumero = parseInt(prompt("ingrese el sexto numero: "));
+
+    primeraParte = primerNumero + segundoNumero + tercerNumero;
+    segundaParte = (tercerNumero *cuartoNumero * quintoNumero) + sextoNumero;
+    
+    document.write(primeraParte + "<br>")
+    document.write(segundaParte);
+    </script> -->
+
+    <!-- <script>
+        /*[Apus] 
+    Crear un script que permita simular de forma muy básica el mecanismo de una caja registradora.
+     El usuario debe insertar el nombre del producto, la cantidad y el precio unitario. 
+     En la pantalla mostrar: “Gracias por comprar x unidades de x articulo. Total: Total a abonar. 
+        */
+    let producto = prompt("ingrese producto: ");
+    let cantidad = parseInt(prompt("ingrese la cantidad del producto a comprar: "));
+    let precio = parseInt(prompt("ingrese precio unitario del producto: "));
+    total = precio * cantidad;
+
+    document.write(`Gracias por comprar ${cantidad} unidades de ${producto}, el total a abonar es: $ ${total}`);
+    </script> -->
+
+    <!-- <script>
+        /*[ElProfesor] 
+    Confeccionar un programa que permita al usuario ingresar 2 notas y calcular: 
+    a_Suma total 
+    b_Promedio 
+    c_Nota máxima 
+        */
+
+    let primeraNota = parseInt(prompt("ingrese la primera nota: "));
+    let segundaNota = parseInt(prompt("ingrese la segunda nota: "));
+
+    sumaTotal= primeraNota + segundaNota;
+    promedio= sumaTotal/2;
+    
+    if(primeraNota > segundaNota){
+        let mayor = primeraNota;
+    }else{
+        mayor = segundaNota;
+    }
+
+    document.write(`El promedio es ${promedio}, y la mejor nota es de ${mayor} `);
+    </script> -->
+
+    <!-- <script>
+        /*[Passwords] 
+Solicitar que se ingrese dos veces una clave. Mostrar un mensaje si son iguales. 
+        */
+
+    let primerIngreso = prompt("ingrese su contraseña: ");
+    let segundoIngreso = prompt("vuelva a ingresar su contraseña: ");
+
+    if(primerIngreso===segundoIngreso){
+        document.write("Bienvenido");
+    }else{
+        document.write("Contraseña incorrecta");
+    }
+    </script> -->
+
+
+    <!-- <script>
+        /* [Movie] 
+Se ingresan por teclado 4 números, si todos los valores ingresados son menores a 23, 
+imprimir en la página ‘Todos los números son menores al número establecido.  */
+
+let primerNumero = parseInt(prompt("ingrese el primer numero: "));
+let segundoNumero = parseInt(prompt("ingrese el segundo numero: "));
+let tercerNumero = parseInt(prompt("ingrese el tercer numero: "));
+let cuartoNumero = parseInt(prompt("ingrese el cuarto numero: "));
+
+if((primerNumero < 23) && (segundoNumero < 23) && (tercerNumero < 23) && (cuartoNumero < 23)){
+    document.write("todos los numeros son menores al numero establecido");
+}else{
+    document.write("al menos un numero es mayor al numero establecido");
+}
+
+    </script> -->
+
+    <!-- <script>
+        /*[Nine] 
+Crear un script que muestre la tabla de multiplicar del 9. */
+
+        for(let i=1; i<=10;i++){
+            let tabla = i * 9;
+            document.write(`9 x ${i} = ${tabla} <br>`);
+        }
+    </script> -->
+
+    <!-- <script>
+        /*DeTodo]C 
+Crear un script que permita al usuario ingresar un número y muestre la tabla de multiplicar
+ y la suma de los mismos. (Ejemplo: El usuario ingresa el numero 4) 
+4x1 = 4 
+4x2 = 8 
+…. 
+4+8+12+16 = 40 */
+
+let numero = parseInt(prompt("ingrese un numero entero: "));
+let suma = 0;
+
+for(let i=1; i<=10;i++){
+    let tabla = i * numero;
+    document.write(`${numero} x ${i} = ${tabla} <br>`);
+    suma = suma + tabla;
+}
+document.write(`La suma de todos los numeros de la tabla del ${numero} es: ${suma}`);
+    </script> -->
+
+    <script>
+        /*[LaFabrica] 
+En una empresa trabajan 5 empleados cuyos sueldos oscilan entre $100 y $500, 
+realizar un programa que lea los sueldos que cobra cada empleado e informe cuántos empleados
+ cobran entre $100 y $300 y cuántos cobran más de $300. 
+ Además el programa deberá informar el importe que gasta la empresa en sueldos al personal (grupo) 
+        */
+
+    let vector = [];
+    
+    for(let i=0; i<5;i++){
+        let sueldo = parseFloat(prompt("ingrese su sueldo: "));
+        vector.push(sueldo);
+    }
+    document.write(vector+"<br>");
+    let cont=0;
+    let total=0;
+    let total2=0;
+    for(let i=0; i<vector.length;i++){
+        if(vector[i]<=300 && vector[i] >=100){
+            cont++;
+            total=total + vector[i];
+        }else{
+            total2=total2 + vector[i];
+        }
+    }
+
+    let Total = total + total2;
+    document.write(`La empresa gasta en sueldos un total de $ ${Total} <br>`);
+    document.write(`Los empleados que cobran un sueldo entre 100 y 300 son ${cont} <br>`);
+    </script>
+</body>
+</html>
